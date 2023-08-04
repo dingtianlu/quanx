@@ -51,6 +51,7 @@ async function getScriptUrl() {
             remarks: remarks.replace(/.$/, ""),
         }
     ];
+    $.log(cookie);
     // 请求青龙服务 添加环境变量
     await $.ql.add(addData);
 
