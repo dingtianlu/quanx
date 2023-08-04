@@ -2,7 +2,7 @@
  * 获取 elm cookie
  *
  * [rewrite_local]
- * https:\/\/nt2\.ele\.me\/c\/(.*) url script-request-header https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Rewrite/elmCookie.js
+ * https:\/\/nt2\.ele\.me\/c\/(.*) url script-request-header https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Rewrite/elmCookie.js
  */
 
 const $ = new API('elm', true);

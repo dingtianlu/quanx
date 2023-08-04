@@ -23,7 +23,7 @@ function getToken(ck) {
 // 获取远程脚本
 async function getScriptUrl() {
     const response = await $.http.get({
-        url: 'https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_api.js',
+        url: 'https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_api.js',
     });
     return response.body;
 }

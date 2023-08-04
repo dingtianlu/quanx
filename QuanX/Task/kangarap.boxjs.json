@@ -22,7 +22,7 @@
         "应用client_id,client_secret（openapi）方式；请去 设置->应用 中添加相关参数，优先以 openapi 方式同步"
       ],
       "author": "@kangarap",
-      "repo": "https://github.com/kangarap/fly-net/tree/main/QuanX/Task",
+      "repo": "https://github.com/dingtianlu/quanx/tree/main/QuanX/Task",
       "icons": [
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/magicjs/images/qinglong_dark.png",
         "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/magicjs/images/qinglong.png"
@@ -30,27 +30,27 @@
       "scripts": [
         {
           "name": "青龙同步到BoxJS【京东CK】",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_jd_cookie_to_box.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_to_box.js"
         },
         {
           "name": "BoxJS同步到青龙【京东CK】",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_jd_cookie_sync.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_sync.js"
         },
         {
           "name": "BoxJS同步到青龙【饿了么CK】",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_elm_cookie_sync.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_elm_cookie_sync.js"
         },
         {
           "name": "BoxJS同步到青龙【美团CK】(待实现)",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_jd_cookie_sync.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_sync.js"
         },
         {
           "name": "备份青龙环境变量",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_env_back.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_back.js"
         },
         {
           "name": "恢复青龙环境变量",
-          "script": "https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Task/ql_env_recovery.js"
+          "script": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_recovery.js"
         }
       ],
       "settings": [

@@ -2,7 +2,7 @@
  * 获取 meituan cookie
  *
  * [rewrite_local]
- * ^https:\/\/lx0\.meituan\.com\/ url script-request-header https://raw.githubusercontent.com/kangarap/fly-net/main/QuanX/Rewrite/meituanCookie.js
+ * ^https:\/\/lx0\.meituan\.com\/ url script-request-header https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Rewrite/meituanCookie.js
  */
 
 const $ = new API('meituan', true);
