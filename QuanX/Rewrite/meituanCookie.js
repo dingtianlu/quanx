@@ -2,10 +2,10 @@
  * 获取 meituan cookie
  *
  * [rewrite_local]
- * ^https:\/\/lx0\.meituan\.com\/ url script-request-header https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Rewrite/meituanCookie.js
+ * ^https:\/\/hlx\.meituan\.com\/ url script-request-header https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Rewrite/meituanCookie.js
  */
 
-const $ = new API('meituan', true);
+const $ = new API('meituan'， true);
 
 (async () => {
     const req = $request;
@@ -14,7 +14,7 @@ const $ = new API('meituan', true);
         
         let ckItems = [];
         
-        for (let key in req.headers) {
+        for (let key 在 req.headers) {
             
           if (key === 'cookie' || key === 'Cookie') {
             const CV = req.headers[key];
@@ -29,7 +29,7 @@ const $ = new API('meituan', true);
       
         if (ckItems.length == 2) {
             // cookie 字符串
-            let str = ckItems.join(' ').replace(/\s/g, '');
+            let str = ckItems.join(' ')。replace(/\s/g， '');
             let newCk = getUsername(str);
             let isUpdate = false;
 
