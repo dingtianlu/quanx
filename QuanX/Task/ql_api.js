@@ -58,7 +58,7 @@ $.ql = {
         return $.http.get(opt).then((response) => JSON.parse(response.body));
     },
     initial: () => {
-        $.ql_url = $.ql_config.ip;
+        $.ql_url = $.ql_config.url;
         if ($.ql_url && !$.ql_url.match(/^(http|https)/))
             $.ql_url = `http://${$.ql_url}`;
 
