@@ -76,8 +76,8 @@ $.ql = {
 
 try {
     /* $.ql_config = JSON.parse($.read('#ql')); */
-    // $.ql_config = JSON.parse($prefs.valueForKey("#ql"));
-    $.ql_config = JSON.parse($.read('#ql'));
+    $.ql_config = JSON.parse($prefs.valueForKey("#ql"));
+    //$.ql_config = JSON.parse($.read('#ql'));
     
 } catch (e) {
     $.ql_config = {};
