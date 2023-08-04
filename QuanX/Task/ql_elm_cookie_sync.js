@@ -31,10 +31,10 @@ async function getScriptUrl() {
     // 查看当前青龙环境中的 默认 JD_COOKIE
     const cookiesRes = await $.ql.select('elmCookie');
     const ids = cookiesRes.data.map((item) => item.id);
-    await $.ql.delete(ids);
-
-    $.log('清空 elmCookie.');
-
+    if (ids.length > 0) {
+        await $.ql.delete(ids);
+        $.log('清空 elmCookie.');
+    }
     let cookie = "";
     let remarks = "";
     $.log(cookiesRes);
