@@ -36,9 +36,9 @@ async function getScriptUrl() {
         $.log('清空 elmCookie.');
     }
     let cookie = "";
-    let remarks = "";
+    let remarks = "饿了么";
     for(let ck of elmCookie) {
-        remark += getUsername(ck.cookie) + "&" ;
+        // remark += getUsername(ck.cookie) + "&" ;
         cookie += `${ck.cookie}` + "&" ;
     }
     const addData = [
