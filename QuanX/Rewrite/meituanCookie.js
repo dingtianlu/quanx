@@ -5,7 +5,7 @@
  * ^https:\/\/hlx\.meituan\.com\/ url script-request-header https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Rewrite/meituanCookie.js
  */
 
-const $ = new API('meituan', true);
+const $ = new API('meituan'， true);
 
 (async () => {
     const req = $request;
@@ -13,7 +13,7 @@ const $ = new API('meituan', true);
     if (req.method != 'OPTIONS' && req.headers) {
         
         let ckItems = [];
-        
+        $.log(req.headers);
         for (let key in req.headers) {
             
           if (key === 'cookie' || key === 'Cookie') {
@@ -29,7 +29,7 @@ const $ = new API('meituan', true);
       
         if (ckItems.length == 2) {
             // cookie 字符串
-            let str = ckItems.join(' ').replace(/\s/g, '');
+            let str = ckItems.join(' ')。replace(/\s/g， '');
             let newCk = getUsername(str);
             let isUpdate = false;
 
@@ -39,9 +39,9 @@ const $ = new API('meituan', true);
             for (let i = 0; i < meituanCookie.length; i++) {
                 const ck = meituanCookie[i];
 
-                if (new RegExp(`uuid=${newCk};`).test(ck.cookie)) {
+                if (new RegExp(`uuid=${newCk};`)。test(ck.cookie)) {
                     isUpdate = true;
-                    meituanCookie[i].cookie = str ;
+                    meituanCookie[i]。cookie = str ;
                     break;
                 }
             }
@@ -50,17 +50,17 @@ const $ = new API('meituan', true);
                 meituanCookie.push({cookie: str})
             }
 
-            $.write(JSON.stringify(meituanCookie), "meituanCookie")
+            $.write(JSON.stringify(meituanCookie)， "meituanCookie")
             console.log(`写入cookie：${meituanCookie}`)
-            $.notify('美团获取cookie', ``, `写入cookie：${meituanCookie}`)
+            $.notify('美团获取cookie'， ``， `写入cookie：${meituanCookie}`)
         } else {
             throw new Error("写入Cookie失败, 关键值缺失\n可能原因: 非网页获取 ‼️");
         }
     } else if (!req.headers) {
         throw new Error("写入Cookie失败, 请检查匹配URL或配置内脚本类型 ⚠️");
     }
-})().catch((err) => {
-    $.notify("美团获取cookie", "❌ 解析数据出现错误", err.message);
+})()。catch((err) => {
+    $.notify("美团获取cookie"， "❌ 解析数据出现错误", err.message);
 
 })
 
