@@ -37,7 +37,7 @@ async function getScriptUrl() {
 
     let cookie = "";
     let remarks = "";
-
+    $.log(cookiesRes);
     for(let ck of elmCookie) {
 
         remark += getUsername(ck.cookie) + "&" ;
