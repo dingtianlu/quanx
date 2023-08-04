@@ -41,12 +41,18 @@ async function getScriptUrl() {
     if (ids.length > 0) {
         await $.ql.delete(ids);
         $.log('清空 meituanCookie.');
-        for (let ck of meituanCookie) {
-            cookie += getToken(ck.cookie) + "&";
-        }
+
         const oldCookies = cookiesRes.data[0].value.split("&");
-        for (let i = 1; i < oldCookies.length; i++) {
-            cookie += oldCookies[i] + "&";
+        for (let i = 0; i < oldCookies.length; i++) {
+            if (i == 1) {
+                for (let ck of meituanCookie) {
+                    cookie += getToken(ck.cookie) + "&";
+                }
+            } else {
+                cookie += oldCookies[i] + "&";
+            }
+
+
         }
 
     } else {
@@ -54,7 +60,6 @@ async function getScriptUrl() {
             cookie += getToken(ck.cookie) + "&";
         }
     }
-
 
     const addData = [
         {
