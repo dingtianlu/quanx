@@ -36,9 +36,10 @@ async function getScriptUrl() {
     // 查看当前青龙环境中的 默认 JD_COOKIE
     const cookiesRes = await $.ql.select('meituanCookie');
     const ids = cookiesRes.data.map((item) => item.id);
-    await $.ql.delete(ids);
-
-    $.log('清空 meituanCookie.');
+    if (ids.length > 0) {
+        await $.ql.delete(ids);
+        $.log('清空 meituanCookie.');
+    }
 
     let cookie = "";
     let remarks = "";
