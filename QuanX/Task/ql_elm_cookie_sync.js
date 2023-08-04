@@ -41,7 +41,6 @@ async function getScriptUrl() {
         remark += getUsername(ck.cookie) + "&" ;
         cookie += `${ck.cookie}` + "&" ;
     }
-
     const addData = [
         {
             name: 'elmCookie',
