@@ -15,7 +15,7 @@ const $ = new API('meituan', true);
         let ckItems = [];
         $.log(req.headers);
         for (let key in req.headers) {
-
+            $.log(key);
             if (key === 'cookie' || key === 'Cookie') {
                 const CV = req.headers[key];
                 $.log("CV ===> " + CV);
@@ -25,7 +25,7 @@ const $ = new API('meituan', true);
             }
         }
 
-        $.log("ckItems size =====>  " + ckItems.length + " , item =====> " + ckItems)
+        $.log("ckItems size =====>  " + ckItems.length + " , item =====> " + ckItems);
 
         if (ckItems.length == 2) {
             // cookie 字符串
