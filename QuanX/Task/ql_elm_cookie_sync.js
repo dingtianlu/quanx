@@ -60,6 +60,7 @@ async function getScriptUrl() {
     }
 })()
     .catch((e) => {
+        $.log("报错了");
         $.log(JSON.stringify(e));
     })
     .finally(() => {
