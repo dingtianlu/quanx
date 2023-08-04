@@ -2,13 +2,14 @@
   "name": "dingtianlu",
   "description": "https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task",
   "task": [
-    "0 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_to_box.js, tag=青龙京东CK同步到本机, enabled=true",
-    "1 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_sync.js, tag=本机京东CK同步到青龙, enabled=true",
-    "2 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_elm_cookie_sync.js, tag=本机饿了么CK同步到青龙, enabled=true",
-    "3 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync.js, tag=本机美团CK同步到青龙, enabled=true",
-    "3 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync_dtl.js, tag=DTL本机美团CK同步到青龙, enabled=true",
-    "3 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync_lcx.js, tag=LCX本机美团CK同步到青龙, enabled=true",
-    "4 20 5,6 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_back.js, tag=备份青龙环境变量, enabled=true",
-    "5 10 7 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_recovery.js, tag=恢复青龙环境变量, enabled=true"
+    "0 20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_to_box.js, tag=青龙京东CK同步到本机, enabled=false",
+    "0 20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/settting_ql_env.js, tag=设置青龙信息, enabled=false",
+    "1 20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_jd_cookie_sync.js, tag=本机京东CK同步到青龙, enabled=false",
+    "2 6,20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_elm_cookie_sync.js, tag=本机饿了么CK同步到青龙, enabled=false",
+    "3 6,20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync.js, tag=本机美团CK同步到青龙, enabled=false",
+    "3 6,20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync_dtl.js, tag=DTL本机美团CK同步到青龙, enabled=false",
+    "3 6,20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_mt_cookie_sync_lcx.js, tag=LCX本机美团CK同步到青龙, enabled=false",
+    "4 20 * * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_back.js, tag=备份青龙环境变量, enabled=false",
+    "5 10 7 * * https://raw.githubusercontent.com/dingtianlu/quanx/main/QuanX/Task/ql_env_recovery.js, tag=恢复青龙环境变量, enabled=false"
   ]
 }
