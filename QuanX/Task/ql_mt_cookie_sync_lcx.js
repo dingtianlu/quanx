@@ -43,18 +43,25 @@ async function getScriptUrl() {
         $.log('清空 meituanCookie.');
 
         const oldCookies = cookiesRes.data[0].value.split("&");
-        for (let i = 0; i < oldCookies.length; i++) {
-            if (i == 1) {
-                for (let ck of meituanCookie) {
-                    cookie += getToken(ck.cookie) + "&";
-                }
-            } else {
-                cookie += oldCookies[i] + "&";
+        if (oldCookies.length < 2) {
+            cookie += oldCookies[0] + "&";
+            for (let ck of meituanCookie) {
+                cookie += getToken(ck.cookie) + "&";
             }
 
+        } else {
+            for (let i = 0; i < oldCookies.length; i++) {
+                if (i == 1) {
+                    for (let ck of meituanCookie) {
+                        cookie += getToken(ck.cookie) + "&";
+                    }
+                } else {
+                    cookie += oldCookies[i] + "&";
+                }
 
+
+            }
         }
-
     } else {
         for (let ck of meituanCookie) {
             cookie += getToken(ck.cookie) + "&";
